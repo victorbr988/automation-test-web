@@ -1,5 +1,6 @@
 import express from "express";
 import { scrape } from "./scrape";
+import "dotenv/config"
 
 const app = express()
 
@@ -12,6 +13,6 @@ app.get("/scrap", async (request, response) => {
   await scrape(response)
 })
 
-app.listen(4000, () => {
-  console.log(`Server listening on port 4000`)
+app.listen(process.env.PORT, () => {
+  console.log(`Server listening on port ${process.env.PORT}`)
 })
