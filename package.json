@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/src/index.js",
+    "start": "npm run build && node ./dist/src/server.js",
+    "dev": "ts-node-dev ./src/server.ts --watch",
     "build": "npx tsc"
   },
   "keywords": [],
@@ -18,7 +19,11 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "puppeteer": "^21.6.1"
+    "puppeteer": "^21.6.1",
+    "ts-node-dev": "^2.0.0",
+    "winston": "^3.11.0"
   }
 }
