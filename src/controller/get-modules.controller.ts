@@ -20,8 +20,6 @@ export class GetModulesController {
       return response.status(200).json({ title: modules })
     } catch(error) {
       return response.status(400).json({ message: "Falha ao obter os módulos" })
-    } finally {
-      await this.browser.close()
     }
   }
 }

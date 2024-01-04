@@ -9,7 +9,7 @@ export async function browserConfig(): Promise<Browser> {
       "--no-zygote",
       '--disable-features=site-per-process'
     ],
-    executablePath: process.env.NODE_ENV === "production" ? process.env.PUPPETEER_EXECUTABLE_PATH : puppeteer.executablePath()
+    executablePath: process.env.NODE_ENV === "production" ? process.env.PUPPETEER_EXECUTABLE_PATH : process.env.EXECUTABLE_PATH_ENVOIROMENT_DEV
   });
 
   return browser
